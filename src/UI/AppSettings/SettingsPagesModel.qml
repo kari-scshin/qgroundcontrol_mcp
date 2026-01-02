@@ -21,6 +21,13 @@ ListModel {
     }
 
     ListElement {
+        name: "Co-pilot"
+        url: "qrc:/qml/QGroundControl/AppSettings/CoPilotSettings.qml"
+        iconUrl: "qrc:/res/gear-white.svg"
+        pageVisible: function() { return true }
+    }
+
+    ListElement {
         name: qsTr("Fly View")
         url: "qrc:/qml/QGroundControl/AppSettings/FlyViewSettings.qml"
         iconUrl: "qrc:/qmlimages/PaperPlane.svg"

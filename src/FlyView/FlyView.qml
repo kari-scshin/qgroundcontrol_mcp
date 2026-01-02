@@ -19,6 +19,7 @@ import QtQml.Models
 
 import QGroundControl
 import QGroundControl.Controls
+import QGroundControl.LLM
 import QGroundControl.FlyView
 import QGroundControl.FlightMap
 import QGroundControl.UTMSP
@@ -188,5 +189,16 @@ Item {
         guidedValueSlider:  _guidedValueSlider
         utmspSliderTrigger: utmspSendActTrigger
         visible:            !QGroundControl.videoManager.fullScreen
+    }
+
+    ChatWidget {
+        id:                 chatWidget
+        anchors.left:       parent.left
+        anchors.bottom:     parent.bottom
+        anchors.margins:    ScreenTools.defaultFontPixelWidth * 2
+        anchors.bottomMargin: ScreenTools.defaultFontPixelWidth * 5
+        visible:            !QGroundControl.videoManager.fullScreen
+        activeVehicle:      _activeVehicle
+        z:                  QGroundControl.zOrderTopMost
     }
 }

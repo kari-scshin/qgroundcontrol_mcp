@@ -23,6 +23,7 @@ qt_add_qml_module(QGroundControlModule
     NO_PLUGIN
 )
 
+
 # ============================================================================
 # Subdirectories
 # ============================================================================
@@ -54,6 +55,7 @@ add_subdirectory(UTMSP)
 add_subdirectory(Vehicle)
 add_subdirectory(VideoManager)
 add_subdirectory(Viewer3D)
+add_subdirectory(LLM)
 
 # Platform-specific
 add_subdirectory(Android)
@@ -141,6 +143,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         ToolbarModule
         UTMSPModule
         VehicleSetupModule
+        LLMModule
 )
 
 # ----------------------------------------------------------------------------

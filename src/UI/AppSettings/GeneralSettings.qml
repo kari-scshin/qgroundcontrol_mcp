@@ -51,6 +51,7 @@ SettingsPage {
             visible:    _appSettings.followTarget.visible
         }
 
+
         FactCheckBoxSlider {
             Layout.fillWidth: true
             text:           qsTr("Mute all audio output")
